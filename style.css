@@ -118,6 +118,18 @@ a {
     border: 5px solid rgb(255, 17, 0);
 }
 
+/* Desktop large (1920x1080) – đẩy hình nền và avatar lên một chút
+   để không mất chữ "TO YOU" ở phía dưới */
+@media (min-width: 1200px) and (min-height: 800px) {
+    .page__main {
+        background-position: center -160px;
+    }
+
+    .cover {
+        margin-top: 1rem;
+    }
+}
+
 /* Responsive: Smartphone */
 @media (max-width: 767px) {
     .page__main {
