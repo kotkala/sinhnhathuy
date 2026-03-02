@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("./9SHW2XH.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-size: 14px;
+    font-family: "sans-serif", "sans-serif", sans-serif;
+    color: #660086;
+    overflow: auto;
+}
+a {
+    color: #00ff45;
+    font-size: 14px;
+    text-decoration: none;
+}
+#main {
+    width: 100%;
+}
+#wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    height: 680px;
+    margin-top: 10px;
+}
+#text {
+    width: 400px;
+    height: auto;
+    left: 60px;
+    top: 80px;
+    position: absolute;
+}
+#code {
+    display: none;
+    font-size: 16px;
+    line-height: 1.6;
+}
+#clock-box {
+    position: absolute;
+    left: 60px;
+    top: 550px;
+    font-size: 28px;
+    display: none;
+}
+#clock-box a {
+    font-size: 28px;
+    text-decoration: none;
+}
+#clock {
+    margin-left: 48px;
+}
+#clock .digit {
+    font-size: 64px;
+}
+#canvas {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+    height: 680px;
+}
+#error {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 60px;
+    display: none;
+}
+.hand {
+    cursor: pointer;
+}
+#code {
+    width: 500px;
+    color: #3b6900;
+    font-family: cursive;
+}
+.space {
+    margin-right: 150px;
+}
+
+.say {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Responsive: Smartphone */
+@media (max-width: 767px) {
+    body {
+        font-size: 13px;
+        background-size: cover;
+        background-position: center top;
+    }
+
+    #wrap {
+        width: 100%;
+        height: auto;
+        padding: 1rem 1rem 2.5rem;
+    }
+
+    #text {
+        position: static;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 1rem 1rem 1.25rem;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    #code {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    #clock-box {
+        position: static;
+        margin-top: 1.25rem;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #clock {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    #clock .digit {
+        font-size: 32px;
+    }
+
+    /* Ẩn canvas trên màn hình nhỏ để ưu tiên text, tránh vỡ layout */
+    #canvas {
+        display: none;
+    }
+}
+
+/* Responsive: Tablet (iPad) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #wrap {
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        padding: 1.5rem 1.5rem 2rem;
+    }
+
+    #text {
+        left: 30px;
+        top: 60px;
+        width: 360px;
+    }
+
+    #clock-box {
+        left: 30px;
+        top: auto;
+        bottom: 30px;
+    }
+
+    #canvas {
+        width: 100%;
+        max-width: 900px;
+        height: 560px;
+    }
+
+    #clock .digit {
+        font-size: 48px;
+    }
+}

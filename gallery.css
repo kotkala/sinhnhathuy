@@ -1,8 +1,10 @@
 body {
     /* Ảnh nền của trang thứ 3 */
-    background: url("../img/wood.jpg");
+    background: url("./wood.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
+    padding: 0;
   }
   .hello {
     opacity: 1 !important;
@@ -41,6 +43,8 @@ body {
     grid-row-gap: 8px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-auto-rows: 8px;
+    padding: 1.5rem 2rem 2.5rem;
+    box-sizing: border-box;
   }
   .gallery img {
     max-width: 100%;
@@ -63,14 +67,24 @@ body {
   .gallery .gallery-item:hover {
     transform: scale(1.025);
   }
-  @media (max-width: 600px) {
+  /* Smartphone */
+  @media (max-width: 767px) {
     .gallery {
-      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding: 1rem 1rem 2rem;
+      grid-row-gap: 10px;
+      grid-column-gap: 10px;
     }
   }
-  @media (max-width: 400px) {
+
+  /* Tablet (iPad) */
+  @media (min-width: 768px) and (max-width: 1024px) {
     .gallery {
-      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 2.5rem;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
     }
   }
   @-moz-keyframes zoomin {

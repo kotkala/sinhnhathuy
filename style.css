@@ -5,23 +5,26 @@ html {
     font-family: "Roboto", sans-serif;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 a {
     text-decoration: none;
 }
 
 .page__main {
-    /* Ảnh nền của trang đầu tiên nếu bạn muốn đổi thì đổi tại đây */
-    background-image: url("../img/background.png");
+    background-image: url("./background.png");
     background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
     background-size: cover;
-    background-position-y: -18rem;
+    background-position: center top;
+    min-height: 100vh;
 }
 .buttons {
     display: flex;
     column-gap: 3rem;
-    padding: 2rem;
+    padding: 2rem 3rem;
 }
 
 .btn-bir:hover {
@@ -98,7 +101,7 @@ a {
 }
 
 .btn-gallery:hover {
-    background-position: right center; /* change the direction of the change here */
+    background-position: right center;
     color: #fff;
     text-decoration: none;
 }
@@ -106,12 +109,69 @@ a {
 .cover {
     width: 240px;
     height: 240px;
-   
     box-shadow: 0 0 30px #eee;
     position: absolute;
     margin-top: 3rem;
-    left: calc(50% - 100px);
-  
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 120px;
     border: 5px solid rgb(255, 17, 0);
+}
+
+/* Responsive: Smartphone */
+@media (max-width: 767px) {
+    .page__main {
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .buttons {
+        flex-direction: column;
+        row-gap: 1rem;
+        column-gap: 0;
+        padding: 1.5rem 1rem;
+        align-items: center;
+    }
+
+    .btn-bir,
+    .btn-timeline,
+    .btn-gallery {
+        width: 100%;
+        max-width: 320px;
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .cover {
+        position: relative;
+        margin-top: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 180px;
+        height: 180px;
+        border-radius: 999px;
+    }
+}
+
+/* Responsive: Tablet (iPad) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .buttons {
+        justify-content: center;
+        padding: 2rem;
+        column-gap: 1.5rem;
+    }
+
+    .btn-bir,
+    .btn-timeline,
+    .btn-gallery {
+        padding: 14px 36px;
+        font-size: 0.95rem;
+    }
+
+    .cover {
+        width: 210px;
+        height: 210px;
+        margin-top: 2rem;
+        border-radius: 999px;
+    }
 }
